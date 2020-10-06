@@ -1,0 +1,10 @@
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.csprojAssemblyReference.cache
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.Form1.resources
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.Properties.Resources.resources
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.csproj.GenerateResource.cache
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.csproj.CoreCompileInputs.cache
+G:\myCode\C#\Csharp1\Csharp1\bin\Debug\Csharp1.exe.config
+G:\myCode\C#\Csharp1\Csharp1\bin\Debug\Csharp1.exe
+G:\myCode\C#\Csharp1\Csharp1\bin\Debug\Csharp1.pdb
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.exe
+G:\myCode\C#\Csharp1\Csharp1\obj\Debug\Csharp1.pdb

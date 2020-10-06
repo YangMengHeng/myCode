@@ -1,0 +1,19 @@
+GUNDAMCLUB is an application for Gundam fans to buy the gunpla. 
+The plastic model.
+With this app, you can buy some limited model, normal model or special model.
+In addition, 
+you can also use online chat to consult the seller's customer service about the product information.
+If the amount is not enough, you need to recharge online before purchasing.
+After successful purchase, the merchant will send express according to your address, 
+and the goods will arrive in your hands in a few days.
+Applicaiton Module:
+(1)Login&Register
+(2)Shop&Buy
+(3)PersonalInformation
+(4)ChatWithSeller
+(5)Help&Link
+Register:Account.Maximium(20char),Password.Maximium(20char),Name.Maximium(8char);
+HelpPageLink:Open the website about @Gerald personal website;
+ShopPageLink:TaoBao Website;
+Admin&UserPageLink:The app Coder instruction.
+If you have any questions about the app, pls call me at 964327216@qq.com. I'm glad to serve for you.
