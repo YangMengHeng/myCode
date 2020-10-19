@@ -8,7 +8,7 @@ const int INF = INT32_MAX;
 const int modify = 100000;
 
 /*
-算法题目：城市之间的最短路径-Dijkstra算法
+算法题目：最短路径-Dijkstra算法
 问题描述：
 	N个城市，标号从0到N-1，M条道路，
 	第K条道路（K从0开始）的长度为2^K，求编号为0的城市到其他城市的最短距离。
@@ -91,7 +91,7 @@ int main()
 			int u, v;
 			cin >> u >> v;
 			int Fu = Find(f[u]), Fv = Find(f[v]);
-			if (Fu!=Fv) f[Fu] = Fv;
+			if (Fu != Fv) f[Fu] = Fv;
 			else continue;
 			G[u].push_back(Node(v, mod(2, k)));
 			G[v].push_back(Node(u, mod(2, k)));

@@ -37,7 +37,7 @@ int main()
 {
 	scanf("%d", &n);
 	ans = n;
-	for(int i = 1; i < n; i++)
+	for(int i = 1; i <= n - 2; i++)
 	{
 		t = n - i - 1;
 		if(t > 0)

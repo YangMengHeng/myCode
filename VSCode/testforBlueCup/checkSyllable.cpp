@@ -47,32 +47,32 @@ bool checkSyllable(string t)
 	{
 		if (t[i] == 'a' || t[i] == 'e' || t[i] == 'i' || t[i] == 'o' || t[i] == 'u')
 		{
-			nextPos = i;
+			nextPos = i + 1;
 			break;
 		}
 	}
-	if (nextPos == -1) return false;
-	for (int i = nextPos + 1; i < t.size(); i++)
+	if (nextPos == -1 || (nextPos - 1) == 0) return false;
+	for (int i = nextPos; i < t.size(); i++)
 	{
 		if (t[i] != 'a' && t[i] != 'e' && t[i] != 'i' && t[i] != 'o' && t[i] != 'u')
 		{
-			nextPos = i;
+			nextPos = i + 1;
 			f1 = i;
 			break;
 		}
 	}
 	if (f1 == -1) return false;
-	for (int i = nextPos + 1; i < t.size(); i++)
+	for (int i = nextPos; i < t.size(); i++)
 	{
 		if (t[i] == 'a' || t[i] == 'e' || t[i] == 'i' || t[i] == 'o' || t[i] == 'u')
 		{
-			nextPos = i;
+			nextPos = i + 1;
 			f2 = i;
 			break;
 		}
 	}
 	if (f2 == -1) return false;
-	for (int i = nextPos + 1; i < t.size(); i++)
+	for (int i = nextPos; i < t.size(); i++)
 	{
 		if (t[i] != 'a' && t[i] != 'e' && t[i] != 'i' && t[i] != 'o' && t[i] != 'u')
 			return false;

@@ -42,7 +42,6 @@ const int INF = 1000000000;
 */
 
 int n, t, dis[maxv][maxv];
-bool vis[maxv] = { false };
 void Floyd();
 
 int main(void)

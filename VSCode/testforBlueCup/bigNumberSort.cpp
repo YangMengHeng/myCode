@@ -33,13 +33,14 @@ struct node{
 }num[110];
 
 bool cmp(node a,node b){
-    if(a.len!=b.len) return a.len<b.len;
-    else return strcmp(a.str,b.str)<0;
+    if(a.len != b.len) return a.len < b.len;
+    else return strcmp(a.str, b.str) < 0;
 }
 
 int main(void)
 {
     int n;
+
     while(scanf("%d",&n)!=EOF)
 	{
     	for(int i=0;i<n;i++)
@@ -52,14 +53,6 @@ int main(void)
             	printf("%s\n",num[i].str);
         }
     }
-	
+
     return 0;
 }
-
-class nanPengYou{
-	string name;
-	string sex;
-	.......待续
-}
-
-nanPengYou smmDEnpy;

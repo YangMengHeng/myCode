@@ -99,7 +99,8 @@ void showResult()
 
 int partition(int changeNumber[], int left, int right)
 {
-	int randNumber = (round(1.0*rand() / RAND_MAX * (right - left) + left));
+	int randNumber;
+	randNumber = (round(1.0*rand() / RAND_MAX * (right - left) + left));
 	swap(changeNumber[left], changeNumber[randNumber]);
 
 	/*

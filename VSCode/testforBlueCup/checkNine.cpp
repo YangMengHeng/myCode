@@ -37,6 +37,14 @@ bool checkNine(int t)
 
 	sprintf(temp, "%d", t);
 	string s(temp);
+	// while(t)
+	// {
+	// 	int a = t % 10;
+	// 	if(a == 9)
+	// 		return true;
+	// 	t /= 10;
+	// }
 
+	// return false;
 	return s.find('9') != string::npos;
 }

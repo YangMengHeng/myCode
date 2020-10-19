@@ -48,10 +48,9 @@ int searchRoot(int x);
 
 int main(void)
 {
-	while (scanf("%d %d", &n, &m) != EOF)
+	while (scanf("%d %d", &n, &m) != EOF && n != 0 && m != 0)
 	{
 		int a, b;
-		if(n == 0 && m == 0) break;
 		init();
 		for (int i = 0; i < m; i++)
 		{

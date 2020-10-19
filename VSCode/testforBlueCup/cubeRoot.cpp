@@ -31,10 +31,12 @@ int main()
 	{
 		x = (double)d;
 		double temp = x;
-		for (int i = 0; i < n; i++) temp = temp * 2 / 3 + x / (3 * temp * temp);
+		for (int i = 0; i < n; i++)
+			temp = temp * 2 / 3 + x / (3 * temp * temp);
 		result.push_back(temp);
 	}
-	for (vector<double>::iterator it = result.begin(); it < result.end(); it++)
+	vector<double>::iterator it = result.begin();
+	for (; it < result.end(); it++)
 		printf("%.6lf\n", *it);
 
 	return 0;

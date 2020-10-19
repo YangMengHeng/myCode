@@ -14,7 +14,8 @@ using namespace std;
 	矩阵对角线上的元素始终是1/1，对角线两边分数的分母逐个递增。
 	请求出这个矩阵的总和。
 输入：
-	输入包含多组测试数据。每行给定整数N（N<50000），表示矩阵为N*N。当N=0时，输入结束
+	输入包含多组测试数据。每行给定整数N（N<50000），
+	表示矩阵为N*N。当N=0时，输入结束
 输出：
 	输出答案，结果保留2位小数
 样例输入：
@@ -49,7 +50,7 @@ int main()
 	while (scanf("%d", &n) != EOF && n != 0)
 	{
 		double sum = n;
-		for (int i = n - 1, j = 2; i > 0; i--,j++) 
+		for (int i = n - 1, j = 2; i > 0; i--,j++)
 			sum += i / (double)j * 2;
 		result.push_back(sum);
 	}

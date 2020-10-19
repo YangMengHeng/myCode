@@ -37,48 +37,57 @@ using namespace std;
 	010
 */
 
-struct binaryTree
-{
-	int data;
-	int parent;
-	int lchild;
-	int rchild;
-
-	binaryTree()
-	{
-		data = parent = lchild = rchild = -1;
-	}
-};
-vector<binaryTree> node;
-binaryTree creatTree(int data, int parent);
-binaryTree* combineTree(binaryTree* a, binaryTree* b);
-int n, num[100];
-
+int n, heap[maxlength];
+void heapSort(int t[]);
+void downAdjust(int low, int high);
+void creatHeap();
 
 int main(void)
 {
-	scanf("%d", &n);
-	for(int i = 0; i < n; i++)
-		scanf("%d", &num[i]);
-	for(int i = 0; i < n - 2; i++)
-	{
-		int min1 = i + 1, min2 = i + 2;
-		for(int j = i; j < i + 2; j++)
-		{
-			if(num[j] < num[min1] && num[j] < num[min2])
-				min1 = j;
-			else if((num[j] < num[min1] && num[j] > num[min2])
-			|| (num[j] < num[min2] && num[j] > num[min1]))
-				min2 = j;
-			else
-			{
-				if(num[min1] > num[min2])
-					swap(min1, min2);
-				break;
-			}
-		}
-		node.push_back(creatTree());
-	}
+    while (scanf("%d", &n) != EOF)
+    {
+        for (int i = 1; i <= n; i++)
+            scanf("%d", &heap[i]);
+        heapSort(heap);
+        for(int i = 1; i <= n; i++)
+            printf("%d ", heap[i]);
+        printf("\n");
+    }
 
-	return 0;
+    return 0;
+}
+
+void heapSort(int t[])
+{
+    creatHeap();
+    for(int i = n; i > 1; i--)
+    {
+        swap(heap[i], heap[1]);
+        downAdjust(1, i - 1);
+    }
+}
+
+void downAdjust(int low, int high)
+{
+    int i = low;
+    int j = 2 * i;
+
+    while(j <= high)
+    {
+        if(j + 1 <= high && heap[j + 1] > heap[j])
+            j++;
+        if(heap[j] > heap[i])
+        {
+            swap(heap[i], heap[j]);
+            i = j;
+            j = 2 * i;
+        }
+        else break;
+    }
+}
+
+void creatHeap()
+{
+    for(int i = n / 2; i >= 1; i--)
+        downAdjust(i, n);
 }

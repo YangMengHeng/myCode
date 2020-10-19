@@ -23,7 +23,7 @@ bool checkIncrease(int t);
 int main()
 {
 	int ans = 0, n;
-cmd /c .\"test.exe"
+
 	scanf("%d", &n);
 	for(int i = 1; i <= n; i++)
 		if(checkIncrease(i)) ans++;
