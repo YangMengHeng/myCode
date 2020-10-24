@@ -21,9 +21,9 @@ using namespace std;
 	11 31 41 61
 */
 
-int n, primeTable[maxLength], primeCounts = 0, tmp = 2, t;
+int n, tmp = 2, t;
 bool primeSign[maxLength] = { 0 };
-vector<int> result;
+vector<int> result, primeTable;
 void findPrimeTable();
 
 int main()
@@ -61,7 +61,7 @@ void findPrimeTable()
 				tmp = i;
 				break;
 			}
-			primeTable[primeCounts++] = i;
+			primeTable.push_back(i);
 			for (int j = i + i; j < maxLength; j += i)
 				primeSign[j] = true;
 			t = i % 10;

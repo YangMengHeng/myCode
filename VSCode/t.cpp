@@ -1,23 +1,22 @@
-#include<cstdio>
-#include<iostream>
-#include<cstring>
-#include<algorithm>
-#include<queue>
-#include<stack>
-#include<set>
-#include<map>
-#include<vector>
-#include<cmath>
+#include <iostream>
 using namespace std;
 
-int dp[2020];
-int two, five;
-typedef long long ll;
-#define M 59084709587505
+int n, ans;
+int Fibonacci(int n);
 
-int main()
+int main(void)
 {
-	
+	while(scanf("%d", &n) != EOF)
+	{
+		ans = Fibonacci(n);
+		printf("%d\n", ans);
+	}
 
-    return 0;
+	return 0;
+}
+
+int Fibonacci(int n)
+{
+	if(n == 1 || n == 0) return n;
+    else return Fibonacci(n - 1) + Fibonacci(n - 2);
 }
