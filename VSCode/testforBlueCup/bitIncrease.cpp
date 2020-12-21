@@ -18,7 +18,8 @@ using namespace std;
 	26
 */
 
-bool checkIncrease(int t);
+bool checkIncreaseByString(int t);
+bool checkIncreaseByInteger(int t);
 
 int main()
 {
@@ -26,13 +27,14 @@ int main()
 
 	scanf("%d", &n);
 	for(int i = 1; i <= n; i++)
-		if(checkIncrease(i)) ans++;
-	printf("%d", ans);
+		//if(checkIncreaseByString(i)) ans++;
+		if(checkIncreaseByInteger(i)) ans++;
+	printf("%d\n", ans);
 
 	return 0;
 }
 
-bool checkIncrease(int t)
+bool checkIncreaseByString(int t)
 {
 	char temp[8];
 
@@ -40,6 +42,24 @@ bool checkIncrease(int t)
 	string s(temp);
 	for(int i = 1; i < s.size(); i++)
 		if(s[i - 1] > s[i]) return false;
+
+	return true;
+}
+
+bool checkIncreaseByInteger(int t)
+{
+	int t1 = t % 10;
+	int t2;
+
+	t /= 10;
+	while(t)
+	{
+		t2 = t % 10;
+		if(t1 < t2)
+			return false;
+		t1 = t2;
+		t /= 10;
+	}
 
 	return true;
 }

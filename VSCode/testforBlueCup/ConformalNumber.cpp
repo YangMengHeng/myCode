@@ -23,7 +23,6 @@ using namespace std;
 	No!
 */
 
-int resultNumbers[maxlength] = {0}, resultCounts = 0;
 int handleNumber, handleSquare;
 
 int main(void)
@@ -40,19 +39,16 @@ int main(void)
 			int cmp2 = handleSquare % 10;
 			if(cmp1 != cmp2)
 			{
-				resultNumbers[resultCounts++] = 2;
 				flag = 0;
 				break;
 			}
 			handleNumber /= 10;
 			handleSquare /= 10;
 		}
-		if(flag != 0) resultNumbers[resultCounts++] = 1;
-	}
-	for(int i = 0; i < resultCounts; i++)
-	{
-		if(resultNumbers[i] == 1) printf("Yes!\n");
-		else printf("No!\n");
+		if(flag != 0)
+			printf("Yes!\n");
+		else
+			printf("No!\n");
 	}
 
 	return 0;
