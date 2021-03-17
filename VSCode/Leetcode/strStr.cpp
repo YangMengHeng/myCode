@@ -38,7 +38,7 @@ int main(void)
 
 int strStr(string haystack, string needle)
 {
-	int pos = 0, num1 = needle.size(), num2, len = 0;
+	int len = 0, num1 = needle.size(), num2, i = 0, len1 = 0;
 	string s = haystack;
 
 	if (!needle.size())
@@ -48,24 +48,24 @@ int strStr(string haystack, string needle)
 		num2 = s.size();
 		if (num2 < num1)
 			return -1;
-		pos = s.find_first_of(needle[0]);
-		if (pos != string::npos)
+		len = s.find_first_of(needle[0]);
+		if (len != string::npos)
 		{
 			int j = 1;
-			len += pos;
+			len1 += len;
 
 			for (; j < num1; j++)
 			{
-				char c = s[pos + j];
+				char c = s[len + j];
 				if (c != needle[j])
 				{
-					s = s.substr(pos + 1, num2);
-					len++;
+					s = s.substr(len + 1, num2);
+					len1++;
 					break;
 				}
 			}
 			if (j == num1)
-				return len;
+				return len1;
 		}
 		else
 			return -1;
