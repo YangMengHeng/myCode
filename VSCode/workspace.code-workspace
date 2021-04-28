@@ -6,6 +6,9 @@
 	],
 	"settings": {
 		"python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe",
-		"git.ignoreLimitWarning": true
+		"git.ignoreLimitWarning": true,
+		"files.associations": {
+			"ostream": "cpp"
+		}
 	}
 }
